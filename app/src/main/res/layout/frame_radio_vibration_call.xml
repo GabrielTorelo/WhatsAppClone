@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_disable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/disable"
+                android:textSize="16sp"
+                android:checked="true"
+                android:onClick="onRadioBtnVibrationCallClicked"/>
+
+            <RadioButton
+                android:id="@+id/radio_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/standard"
+                android:textSize="16sp"
+                android:onClick="onRadioBtnVibrationCallClicked"/>
+
+            <RadioButton android:id="@+id/radio_short"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/short_"
+                android:textSize="16sp"
+                android:onClick="onRadioBtnVibrationCallClicked"/>
+
+            <RadioButton android:id="@+id/radio_long"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/long_"
+                android:textSize="16sp"
+                android:onClick="onRadioBtnVibrationCallClicked"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</FrameLayout>

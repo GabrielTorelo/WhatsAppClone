@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:background="@color/colorBackGround"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/profile_BottomPicture"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ln_removePhoto"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/colorBackGround"
+                app:elevation="0dp"
+                app:backgroundTint="@color/colorRemovePicture"
+                android:src="@drawable/ic_baseline_delete_24"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="@string/profile_BottomRemovePicture"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/colorBackGround"
+                app:elevation="0dp"
+                app:backgroundTint="@android:color/holo_purple"
+                android:src="@drawable/ic_baseline_add_photo_alternate_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="@string/profile_BottomGalleryPicture"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/colorBackGround"
+                app:elevation="0dp"
+                app:backgroundTint="@android:color/holo_blue_dark"
+                android:src="@drawable/ic_baseline_camera_alt_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="@string/profile_BottomCamPicture"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+</LinearLayout>

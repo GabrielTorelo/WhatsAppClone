@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLine"
+        tools:context=".view.activities.chat.ChatActivity">
+
+        <!-- Main Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentInsetLeft="5dp"
+                app:contentInsetStart="5dp"
+                android:background="@color/colorPrimary">
+
+                <!-- Layout Main Toolbar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Layout Back -->
+                    <LinearLayout
+                        android:id="@+id/layout_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="3.5dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <ImageView
+                            android:id="@+id/btn_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/image_profile"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:civ_border_color="@color/colorBlack"
+                            app:civ_border_width="0.5dp"
+                            android:src="@drawable/person_no_picture"/>
+
+                    </LinearLayout>
+
+                    <!-- Layout User Info -->
+                    <LinearLayout
+                        android:id="@+id/open_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/please_wait"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_chat_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loading"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/colorBackGround"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- RecyclerView Chat -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72.5dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+        <!-- Layout Main Send Message -->
+        <LinearLayout
+            android:id="@+id/ln_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <!-- Layout Clips -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layout_clip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/btn_clip_actionDocument"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_insert_drive_file_24"
+                                app:backgroundTint="@color/colorPurpleDark"
+                                app:tint="@color/colorBackGround" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/clip_actionDocument" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_clip_actionCamera"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_camera_alt_24"
+                                app:backgroundTint="@color/colorPinkLight"
+                                app:tint="@color/colorBackGround" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/clip_actionCamera" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_clip_actionGallery"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_add_photo_alternate_24"
+                                app:backgroundTint="@color/colorPinkDark"
+                                app:tint="@color/colorBackGround" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/profile_BottomGalleryPicture" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/btn_clip_actionAudio"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_headset_24"
+                                app:backgroundTint="@color/colorOrange"
+                                app:tint="@color/colorBackGround" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/clip_actionAudio" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_clip_actionLivingRoom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_video_call_24"
+                                app:backgroundTint="@color/colorBlue"
+                                app:tint="@color/colorBackGround" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/clip_actionLivingRoom" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_clip_actionLocalization"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_room_24"
+                                app:backgroundTint="@color/colorGreen"
+                                app:tint="@color/colorBackGround" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/clip_actionLocalization" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/btn_clip_actionContact"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_person_24"
+                                app:backgroundTint="@color/colorBlueLight"
+                                app:tint="@color/colorBackGround" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/clip_actionContact" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Layout Main Actions-->
+            <LinearLayout
+                android:id="@+id/layout_actionsBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLine"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- CardView Messages -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="2dp">
+
+                    <!-- Layout Messages -->
+                    <LinearLayout
+                        android:id="@+id/layout_textView"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingRight="5dp">
+
+                        <!-- Button Smile -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_emoji"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <ImageView
+                                android:id="@+id/imageView_emoji"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_insert_emoticon_24"
+                                app:tint="@color/colorDescriptionMessage" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- TextView Message -->
+                        <EditText
+                            android:id="@+id/edit_message"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/chat_message"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingStart="5dp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <!-- Button Clips -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_file"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <ImageView
+                                android:id="@+id/imageView_file"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_attach_file_24"
+                                app:tint="@color/colorDescriptionMessage" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Button Camera -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_camera"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <ImageView
+                                android:id="@+id/imageView_camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_camera_alt_24"
+                                app:tint="@color/colorDescriptionMessage" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_send"
+                    android:visibility="invisible"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:elevation="0dp"
+                    android:padding="17dp"
+                    app:fabCustomSize="60dp"
+                    android:src="@drawable/ic_baseline_send_24"
+                    app:backgroundTint="@color/colorProfileAlterCam" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Layout Main Record Audio -->
+        <LinearLayout
+            android:id="@+id/layout_recordView"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+
+            <com.devlomi.record_view.RecordView
+                android:id="@+id/record_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center_vertical"
+                app:slide_to_cancel_bounds="0dp"
+                app:slide_to_cancel_margin_right="15dp"
+                app:slide_to_cancel_text="@string/chat_voice_cancel_message"
+                app:counter_time_color="@color/colorCallReceived"/>
+
+            <com.devlomi.record_view.RecordButton
+                android:id="@+id/record_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bg_rec_voice_mic"
+                android:scaleType="centerInside"
+                android:tint="@android:color/white"
+                android:padding="17dp"
+                app:mic_icon="@drawable/recv_ic_mic"/>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

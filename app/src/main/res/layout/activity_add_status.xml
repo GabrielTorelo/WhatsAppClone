@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        android:id="@+id/layout_principal"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/black"
+        tools:context=".view.activities.display.ReviewSendImageActivity">
+
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/imageView"
+            android:transitionName="Imagem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/person_no_picture"
+            android:scaleType="fitCenter"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80000000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"/>
+
+                <!-- Button Crop -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_crop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_crop_rotate_24"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Button Emoji -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_emoji"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_insert_emoticon_24"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Button Add Text -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_add_text"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_title_24"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Button Add Drawn -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_add_draw"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_edit_24"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Edit Add Text MUDAR O MARGEM TOP-->
+        <EditText
+            android:id="@+id/edit_add_text"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:background="@null"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:focusableInTouchMode="true"
+            android:gravity="center"/>
+
+        <!-- Layout Back -->
+        <LinearLayout
+            android:id="@+id/layout_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <!-- Layout Filters -->
+            <LinearLayout
+                android:id="@+id/layout_filters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:text="@string/status_filters"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:background="#66000000"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingRight="15dp">
+
+                        <!-- Add more images -->
+                        <ImageView
+                            android:id="@+id/btn_actionImage"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_baseline_add_photo_alternate_24"/>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorLineBig"/>
+
+                        <!-- Add Legend -->
+                        <EditText
+                            android:id="@+id/edit_image_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="70dp"
+                            android:layout_marginEnd="70dp"
+                            android:background="@android:color/transparent"
+                            android:textColorHint="@color/colorLineBig"
+                            android:textColor="@android:color/white"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:hint="@string/chat_image_message"
+                            android:padding="10dp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Send Status -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_done_24"
+            app:backgroundTint="@color/colorProfileAlterCam"/>
+
+    </RelativeLayout>
+
+</layout>

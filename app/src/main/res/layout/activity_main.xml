@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@color/colorBackGround"
+                app:title="@string/app_name"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:tabGravity="fill"
+                app:tabTextColor="@color/colorBackGroundText"
+                app:tabIndicator="@color/colorBackGround"
+                app:tabIndicatorHeight="3dp"
+                app:tabIndicatorColor="@color/colorBackGround"
+                app:tabSelectedTextColor="@color/colorBackGround">
+            </com.google.android.material.tabs.TabLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:background="@color/colorBackGround"
+            android:id="@+id/view_pager"
+            android:layout_below="@id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_action_sub"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:backgroundTint="@color/colorLineBig"
+                android:tint="@color/colorTextGray"
+                app:borderWidth="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="45dp"
+                android:layout_marginBottom="15dp"
+                app:maxImageSize="22dp"
+                android:scaleType="fitEnd"
+                android:visibility="gone"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_action"
+                android:visibility="visible"
+                android:src="@drawable/ic_baseline_perm_contact_calendar_24"
+                app:backgroundTint="@color/colorText"
+                android:tint="@color/colorBackGround"
+                app:borderWidth="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="55dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                app:maxImageSize="22dp"
+                android:scaleType="fitEnd"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

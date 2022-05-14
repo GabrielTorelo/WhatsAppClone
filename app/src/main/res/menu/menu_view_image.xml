@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/menu_more">
+        <item
+            android:id="@+id/action_all_media"
+            android:title="@string/menu_moreAllMedia"/>
+        <item
+            android:id="@+id/action_show_message"
+            android:title="@string/menu_moreShowMessage"/>
+        <item
+            android:id="@+id/action_share"
+            android:title="@string/share"/>
+        <item
+            android:id="@+id/action_define"
+            android:title="@string/menu_moreDefineFrom">
+            <menu>
+                <item
+                    android:id="@+id/action_change_picture"
+                    android:title="@string/menu_moreChangePicture"/>
+                <item
+                    android:id="@+id/action_change_group_image"
+                    android:title="@string/menu_moreChangeGroupImage"/>
+                <item
+                    android:id="@+id/action_change_wallpaper"
+                    android:title="@string/menu_moreChangeWallpaper"/>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/action_view_gallery"
+            android:title="@string/menu_moreViewGallery"/>
+        <item
+            android:id="@+id/action_spin"
+            android:title="@string/spin"/>
+        <item
+            android:id="@+id/action_delete"
+            android:title="@string/delete"/>
+    </group>
+</menu>

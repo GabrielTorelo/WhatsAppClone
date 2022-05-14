@@ -1,0 +1,45 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+        <item name="android:actionOverflowButtonStyle">@style/DotsTheme</item>
+        <item name="android:actionButtonStyle">@style/ActionButtonTheme</item>
+    </style>
+
+    <style name="OpenLinkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorRadioButtonNotChecked</item>
+        <item name="colorControlActivated">@color/colorPrimaryLight</item>
+        <item name="android:actionOverflowButtonStyle">@style/DotsTheme</item>
+    </style>
+
+    <style name="DisplayImageTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+        <item name="android:actionOverflowButtonStyle">@style/DotsTheme</item>
+    </style>
+
+    <style name="DisplayStatusTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorBackGround</item>
+        <item name="android:actionOverflowButtonStyle">@style/DotsTheme</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorBackGround</item>
+    </style>
+    
+    <style name="DotsTheme" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_baseline_more_vert_24</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="ActionButtonTheme" parent="@android:style/Widget.ActionButton">
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+</resources>

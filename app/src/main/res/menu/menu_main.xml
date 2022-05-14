@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/menu_search"
+        app:showAsAction="always"/>
+    <group
+        android:id="@+id/menu_more">
+        <item
+            android:id="@+id/action_new_group"
+            android:title="@string/menu_moreNewGroup"/>
+        <item
+            android:id="@+id/action_new_broadcast"
+            android:title="@string/menu_moreNewBroadCast"/>
+        <item
+            android:id="@+id/action_wa_web"
+            android:title="@string/menu_moreWhatsCloneWeb"/>
+        <item
+            android:id="@+id/action_starred_message"
+            android:title="@string/menu_moreMessageFavorite"/>
+        <item
+            android:id="@+id/action_settings"
+            android:title="@string/menu_moreConfig"/>
+    </group>
+</menu>

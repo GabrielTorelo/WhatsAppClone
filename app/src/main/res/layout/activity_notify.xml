@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".view.activities.profile.actions.NotifyActivity"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/settings_notify"
+            app:titleTextColor="@color/colorBackGround"
+            android:background="@color/colorPrimary"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackGround"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:scrollingCache="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Layout Able Custom Notify -->
+                <LinearLayout
+                    android:id="@+id/layout_enable_personality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/notify_personality"
+                        android:textColor="@color/colorBlack"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_enable_personality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <!-- Layout Custom Notify Messages-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/notify_messages"
+                        android:textColor="@color/colorPrimaryLight"/>
+
+                </LinearLayout>
+
+                <!-- Layout Custom Sound -->
+                <LinearLayout
+                    android:id="@+id/layout_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_sound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/notify_sound"
+                        android:enabled="false" />
+
+                    <TextView
+                        android:id="@+id/tv_sound_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLine"/> <!-- Line 0.5dp -->
+
+                <!-- Layout Custom Vibration -->
+                <LinearLayout
+                    android:id="@+id/layout_vibration_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_message_vibration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/vibration"
+                        android:enabled="false" />
+
+                    <TextView
+                        android:id="@+id/tv_message_vibration_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disable"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLine"/> <!-- Line 0.5dp -->
+
+                <!-- Layout Custom Pop-up -->
+                <LinearLayout
+                    android:id="@+id/layout_pop_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pop_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/notify_pop_up"
+                        android:enabled="false" />
+
+                    <TextView
+                        android:id="@+id/tv_pop_up_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_available"
+                        android:enabled="false"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLine"/> <!-- Line 0.5dp -->
+
+                <!-- Layout Custom Light -->
+                <LinearLayout
+                    android:id="@+id/layout_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/light"
+                        android:enabled="false" />
+
+                    <TextView
+                        android:id="@+id/tv_light_seleted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/light_white"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLine"/> <!-- Line 0.5dp -->
+
+                <!-- Layout Custom Priority -->
+                <LinearLayout
+                    android:id="@+id/layout_priority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+
+                    <!-- Layout Able Custom Notify -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_priority"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="@string/notify_priority"
+                                android:enabled="false"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notify_priority_preview"/>
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/checkbox_priority"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:enabled="false"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Layout Custom Notify Calls-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/notify_calls"
+                        android:textColor="@color/colorPrimaryLight"/>
+
+                </LinearLayout>
+
+                <!-- Layout Custom Ringing Call -->
+                <LinearLayout
+                    android:id="@+id/layout_ringing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_ringing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/ringing"
+                        android:enabled="false" />
+
+                    <TextView
+                        android:id="@+id/tv_ringing_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLine"/> <!-- Line 0.5dp -->
+
+                <!-- Layout Custom Vibration Call -->
+                <LinearLayout
+                    android:id="@+id/layout_vibration_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_call_vibration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/vibration"
+                        android:enabled="false" />
+
+                    <TextView
+                        android:id="@+id/tv_call_vibration_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/standard"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

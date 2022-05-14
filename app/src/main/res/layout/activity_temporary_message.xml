@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".view.activities.profile.actions.TemporaryMessageActivity"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/profile_messageTemporary"
+            app:titleTextColor="@color/colorBackGround"
+            android:background="@color/colorPrimary"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackGround"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:scrollingCache="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Layout Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            app:cardCornerRadius="100dp"
+                            app:elevation="0dp"
+                            app:cardBackgroundColor="@color/colorNewFeature">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:tint="@color/colorNewFeatureIcon"
+                                android:src="@drawable/ic_baseline_timer_70"
+                                android:layout_gravity="center"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/open_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="@string/TemporaryMessageAndLearnMore"/>
+
+                </LinearLayout>
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine"/> <!-- Line 0.5dp -->
+
+                <!-- Layout Radio Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="@string/profile_messageTemporary"/>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_temporary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radio_enabled_temporary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingStart="20dp"
+                            tools:ignore="RtlSymmetry"
+
+                            android:text="@string/enabled"
+                            android:textSize="16sp"/>
+
+                        <RadioButton android:id="@+id/radio_disabled_temporary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingStart="20dp"
+                            tools:ignore="RtlSymmetry"
+
+                            android:text="@string/disabled"
+                            android:textSize="16sp"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

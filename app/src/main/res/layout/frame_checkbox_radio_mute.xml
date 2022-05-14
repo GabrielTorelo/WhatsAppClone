@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_eight_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry"
+                    android:text="@string/eight_hours"
+                    android:textSize="16sp"
+                    android:onClick="onRadioBtnMuteClicked"/>
+
+                <RadioButton
+                    android:id="@+id/radio_one_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry"
+                    android:text="@string/one_week"
+                    android:textSize="16sp"
+                    android:onClick="onRadioBtnMuteClicked"/>
+
+                <RadioButton android:id="@+id/radio_always"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry"
+                    android:text="@string/always"
+                    android:textSize="16sp"
+                    android:checked="true"
+                    android:onClick="onRadioBtnMuteClicked"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkbox_mute"
+                style="?android:attr/textAppearanceMedium"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_notify"
+                android:textColor="@color/colorBlack"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

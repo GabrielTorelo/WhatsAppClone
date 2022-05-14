@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_standard_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/standard_yes"
+                android:textSize="16sp"
+                android:onClick="onRadioBtnMediaClicked"/>
+
+            <RadioButton
+                android:id="@+id/radio_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/yes"
+                android:textSize="16sp"
+                android:onClick="onRadioBtnMediaClicked"/>
+
+            <RadioButton android:id="@+id/radio_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry"
+                android:text="@string/no"
+                android:textSize="16sp"
+                android:onClick="onRadioBtnMediaClicked"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</FrameLayout>

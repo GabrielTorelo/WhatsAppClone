@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        android:id="@+id/layout_primary"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".view.activities.status.StatusActivity"
+        android:background="@android:color/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/cPreview">
+        </LinearLayout>
+
+        <!-- Square Click Focus -->
+        <ImageView
+            android:id="@+id/click_focus"
+            android:visibility="gone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_click_focus_view"/>
+
+        <!-- Layout Chronometer -->
+        <LinearLayout
+            android:id="@+id/layout_chronometer"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Circle Chronometer -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp">
+
+                <Chronometer
+                    android:id="@+id/btn_chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:background="#FF0000"
+                    android:padding="5dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Layout Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="@android:color/transparent">
+
+            <!-- Layout Gallery -->
+            <LinearLayout
+                android:id="@+id/layout_gallery"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Open Gallery -->
+                <ImageView
+                    android:id="@+id/arrow_up_pictures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24"/>
+
+                <!-- CAROUSEL IMAGE LIST -->
+                <LinearLayout
+                    android:id="@+id/carousel_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/person_no_picture"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/person_no_picture"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/person_no_picture"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/person_no_picture"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/person_no_picture"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/person_no_picture"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Buttons Actions -->
+            <LinearLayout
+                android:id="@+id/layout_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+
+                <!-- Button Flash -->
+                <LinearLayout
+                    android:id="@+id/layout_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp">
+
+                    <ImageView
+                        android:id="@+id/btn_flash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_flash_off_24"/>
+
+                </LinearLayout>
+
+                <!-- Button Pic -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/btn_pic_circular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_card_view"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Button Camera Inverter -->
+                <LinearLayout
+                    android:id="@+id/layout_camera_inverter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp">
+
+                    <ImageView
+                        android:id="@+id/btn_camera_inverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_flip_camera_ios_24"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- User Info -->
+            <LinearLayout
+                android:id="@+id/layout_text_user_info"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:background="@android:color/black"
+                android:paddingTop="2.5dp"
+                android:paddingBottom="2.5dp">
+
+                <TextView
+                    android:id="@+id/text_user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:text="@string/fragmentCameraDescription"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

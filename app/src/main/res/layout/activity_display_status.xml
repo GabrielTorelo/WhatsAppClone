@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/black"
+        tools:context=".view.activities.display.DisplayStatusActivity">
+
+        <!-- Image Status -->
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/person_no_picture"
+            android:scaleType="fitCenter"/>
+
+        <!-- Status Line -->
+        <LinearLayout
+            android:id="@+id/line_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progress_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:max="10000"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_below="@+id/line_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80000000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout_identify"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+                    <!-- Image User Profile -->
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/image_profile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/person_no_picture"
+                        app:civ_border="true"
+                        app:civ_border_width="2dp"/>
+
+                    <!-- Layout User Identify -->
+                    <LinearLayout
+                        android:id="@+id/layout_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Text Name User -->
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/please_wait"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <!-- Text Date Status -->
+                        <TextView
+                            android:id="@+id/tv_date_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loading"
+                            android:textSize="11sp"
+                            android:textColor="@android:color/white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Button More -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_more"
+                    android:visibility="visible"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_more_vert_24"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Layout Back -->
+        <LinearLayout
+            android:id="@id/layout_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <!-- Layout Description -->
+            <LinearLayout
+                android:id="@+id/layout_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="#80000000">
+
+                <!-- Text Description -->
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:textSize="18sp"
+                    android:padding="15dp"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <!-- Layout Actions -->
+            <LinearLayout
+                android:id="@+id/layout_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Layout User Statistics -->
+                <LinearLayout
+                    android:id="@+id/layout_statistics"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_baseline_visibility_24"/>
+
+                    <TextView
+                        android:id="@+id/views_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"
+                        android:text="@string/loading"/>
+
+                </LinearLayout>
+
+                <!-- Layout Reply -->
+                <LinearLayout
+                    android:id="@+id/layout_reply"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_up_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:text="@string/status_reply"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

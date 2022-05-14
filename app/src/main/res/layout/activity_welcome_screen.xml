@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.startup.WelcomeScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="Bem Vindo ao WhatsApp Clone"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/whatsappicon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text='Toque em "Concordo e continuar" para aceitar os Termos de Serviço e Política de Privacidade do WhatsClone.' />
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:backgroundTint="@color/colorText"
+            android:textColor="@color/colorBackGround"
+            android:text="Concordo e continuar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:padding="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="from"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:text="T O R E L O ' S   A P P"/>
+            
+        </LinearLayout>
+
+</RelativeLayout>
